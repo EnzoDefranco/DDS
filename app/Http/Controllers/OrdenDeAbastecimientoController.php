@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use App\Models\Material;
 use App\Models\OrdenDeAbastecimiento;
 use App\Models\Faltante;
@@ -39,6 +39,7 @@ class OrdenDeAbastecimientoController extends Controller
      */
     public function store(Request $request)
     {
+
         // El punto (.) se utiliza para separar el nombre del campo del nombre del índice del array que se está validando. En este caso, nombres.* significa que estamos validando el campo nombres y todos sus elementos.
 
         // El asterisco (*) se utiliza como comodín para indicar que la validación se aplicará a todos los elementos del array. En otras palabras, el asterisco significa "cualquier índice".

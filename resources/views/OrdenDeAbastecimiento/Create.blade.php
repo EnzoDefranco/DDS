@@ -10,14 +10,14 @@
             @csrf
             <div class="col-md-6">
                         <label for="fechaEmision" class="form-label">Fecha de Emisión</label>
-                        <input type="date" class="form-control shadow-none" id="fechaEmision" name="fechaEmision" value="{{ old('fechaEmision') }}">
+                        <input type="date"  readonly class="form-control shadow-none" id="fechaEmision" name="fechaEmision" value="{{ now()->toDateString() }}">
                         @error('fechaEmision')
                             <small class="text-danger">Ingrese la Fecha de Emisión</small>
                         @enderror
                     </div>
                     <div class="col-md-6">
                         <label for="plazo" class="form-label">Plazo</label>
-                        <input type="date" class="form-control shadow-none" id="plazo" name="plazo" value="{{ old('plazo') }}">
+                        <input type="date" class="form-control shadow-none" id="plazo" name="plazo" value="{{ now()->toDateString() }}">
                         @error('plazo')
                         <small class="text-danger">Ingrese el Plazo</small>
                         @enderror
